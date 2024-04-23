@@ -19,5 +19,4 @@ Resources:
         - x86_64
       Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
           Variables:
-              S3_BUCKET: #Value
-
+              S3_BUCKET: aws-sam-cli-managed-default-samclisourcebucket-i8emiclh95ia
