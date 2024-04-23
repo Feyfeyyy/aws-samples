@@ -239,7 +239,7 @@ $RECYCLE.BIN/
 
 # Build folder
 
-*/build/*
+list_s3_objects/.aws-sam/build/template.yaml
 .aws-sam
 
 # End of https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
