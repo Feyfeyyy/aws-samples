@@ -5,9 +5,9 @@ codeuri = "C:\\Users\\fc_ru\\Dev\\AWSProjects\\aws-samples\\list-s3-key-buckets"
 runtime = "python3.9"
 architecture = "x86_64"
 handler = "src.app.lambda_handler"
-source_hash = "6edd868d51562472b96a083f0919168abaa10cb94a3ff081b3309b1418db1959"
+source_hash = "7ec1fd3072d015bbb54795a7dd17944e403ed55f0d8cfbaa5da80fdb61487569"
 manifest_hash = ""
 packagetype = "Zip"
-functions = ["ListS3KeysFunction"]
+functions = ["ListS3ObjectsFunction"]
 
 [layer_build_definitions]

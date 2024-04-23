@@ -10,7 +10,7 @@ Globals:
     MemorySize: 128
 
 Resources:
-  ListS3KeysFunction:
+  ListS3ObjectsFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       Handler: src.app.lambda_handler

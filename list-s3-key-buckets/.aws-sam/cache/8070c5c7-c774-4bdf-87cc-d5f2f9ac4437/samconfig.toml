@@ -4,7 +4,7 @@ version = 0.1
 
 [default]
 [default.global.parameters]
-stack_name = "s3-list-buckets"
+stack_name = "list-s3-objects"
 
 [default.build.parameters]
 cached = true
@@ -17,7 +17,7 @@ lint = true
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
 resolve_s3 = true
-s3_prefix = "s3-list-buckets"
+s3_prefix = "list-s3-objects"
 region = "us-east-1"
 image_repositories = []
 
