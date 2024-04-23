@@ -56,7 +56,7 @@ You can find your API Gateway Endpoint URL in the output values displayed after 
 Build your application with the `sam build --use-container` command.
 
 ```bash
-list-s3-key-buckets$ sam build --use-container
+list_s3_objects$ sam build --use-container
 ```
 
 The SAM CLI installs dependencies defined in `hello_world/requirements.txt`, creates a deployment package, and saves it in the `.aws-sam/build` folder.
@@ -66,14 +66,14 @@ Test a single function by invoking it directly with a test event. An event is a 
 Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
-list-s3-key-buckets$ sam local invoke HelloWorldFunction --event events/event.json
+list_s3_objects$ sam local invoke HelloWorldFunction --event events/event.json
 ```
 
 The SAM CLI can also emulate your application's API. Use the `sam local start-api` to run the API locally on port 3000.
 
 ```bash
-list-s3-key-buckets$ sam local start-api
-list-s3-key-buckets$ curl http://localhost:3000/
+list_s3_objects$ sam local start-api
+list_s3_objects$ curl http://localhost:3000/
 ```
 
 The SAM CLI reads the application template to determine the API's routes and the functions that they invoke. The `Events` property on each function's definition includes the route and method for each path.
@@ -97,7 +97,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
 ```bash
-list-s3-key-buckets$ sam logs -n HelloWorldFunction --stack-name "s3-bucket-creation" --tail
+list_s3_objects$ sam logs -n ListS3ObjectsFunction --stack-name "s3-bucket-creation" --tail
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
@@ -107,12 +107,12 @@ You can find more information and examples about filtering Lambda function logs 
 Tests are defined in the `tests` folder in this project. Use PIP to install the test dependencies and run tests.
 
 ```bash
-list-s3-key-buckets$ pip install -r tests/requirements.txt --user
+list_s3_objects$ pip install -r tests/requirements.txt --user
 # unit test
-list-s3-key-buckets$ python -m pytest tests/unit -v
+list_s3_objects$ python -m pytest tests/unit -v
 # integration test, requiring deploying the stack first.
 # Create the env variable AWS_SAM_STACK_NAME with the name of the stack we are testing
-list-s3-key-buckets$ AWS_SAM_STACK_NAME="s3-bucket-creation" python -m pytest tests/integration -v
+list_s3_objects$ AWS_SAM_STACK_NAME="list-s3-objects" python -m pytest tests/integration -v
 ```
 
 ## Cleanup
@@ -120,7 +120,7 @@ list-s3-key-buckets$ AWS_SAM_STACK_NAME="s3-bucket-creation" python -m pytest te
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-sam delete --stack-name "s3-bucket-creation"
+sam delete --stack-name "list-s3-objects"
 ```
 
 ## Resources
