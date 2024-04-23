@@ -97,7 +97,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
 ```bash
-list-s3-key-buckets$ sam logs -n HelloWorldFunction --stack-name "s3-bucket-creation" --tail
+list-s3-key-buckets$ sam logs -n ListS3ObjectsFunction --stack-name "s3-bucket-creation" --tail
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
@@ -112,7 +112,7 @@ list-s3-key-buckets$ pip install -r tests/requirements.txt --user
 list-s3-key-buckets$ python -m pytest tests/unit -v
 # integration test, requiring deploying the stack first.
 # Create the env variable AWS_SAM_STACK_NAME with the name of the stack we are testing
-list-s3-key-buckets$ AWS_SAM_STACK_NAME="s3-bucket-creation" python -m pytest tests/integration -v
+list-s3-key-buckets$ AWS_SAM_STACK_NAME="list-s3-objects" python -m pytest tests/integration -v
 ```
 
 ## Cleanup
@@ -120,7 +120,7 @@ list-s3-key-buckets$ AWS_SAM_STACK_NAME="s3-bucket-creation" python -m pytest te
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-sam delete --stack-name "s3-bucket-creation"
+sam delete --stack-name "list-s3-objects"
 ```
 
 ## Resources
